@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="header.css" />
+</head>
+<body>
+    <!-- styles -->
+    <style>
+        * {
+            overflow: hidden;
+        }
+        .aboutbox a {
+            font-family:'Courier New';
+            text-decoration:none;
+            color:black;
+        }
+            a:hover {
+                color: dimgrey;
+            }
+
+        .aboutbox {
+            width: 350px;
+            float: right;
+            height: 400px;
+            background-color: #f1f1f1;
+            color: #A9A9A9;
+            font-family: 'Lato';
+            padding: 50px;
+            margin: 80px 200px;
+            line-height:1.6;
+        }
+
+        .back {
+            background-image: url(face.png);
+        }
+    </style>
+
+    <!--the header-->
+    <div class="myheader">
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="headerlinks" id="table" style="margin-top:0;padding-top:0;top:0;margin-right:3px">
+            <ul>
+
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#about" style="margin-left:70px">ABOUT</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">PORTFOLIO</button>
+                        <div class="dropdown-content">
+                            <a href="gallery1.html">PHOTOGRAPHY</a>
+                            <a href="gallery2.html" style="text-align:center">GRAPHICS</a>
+                            <a href="gallery3.html">ILLUSTRATION</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- about box -->
+    <div class="back">
+        <div class=" aboutbox">
+            <h1>About Me</h1>
+            <p>
+                Hobbyist photographer and graphic designer currently studying engineering at the University
+                of British Columbia. Jack of all trades and possibly a master at some.
+                <br /><br />
+                What you'll find here is a collection of my best work whether it be photography,
+                illustration or mixed media. I take inspiration from my life and from the eyes of an observer.
+                <br /><br />
+                <a href="url">work</a> / <a href="url">github</a> / <a href="url">linkedin</a>
+
+            </p>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+
+    <script src="Scripts/jquery-1.10.2.intellisense.js"></script>
+
+
+    <script type="text/javascript" src="graphicjs.js"></script>
+
+</body>
+</html>
