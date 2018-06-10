@@ -188,12 +188,12 @@ body {
 .twobox {
     background-image: url(landscape.png);
     background-size: cover;
+    background-position: center;
     height: inherit;
-    background-position:center;
-}
+ }
 
 .threebox {
     background-image: url(box3.jpeg);
-    background-size: contain;
+    background-size: cover;
     height: inherit;
 }

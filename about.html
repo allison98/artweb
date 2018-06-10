@@ -12,14 +12,16 @@
         * {
             overflow: hidden;
         }
+
         .aboutbox a {
-            font-family:'Courier New';
-            text-decoration:none;
-            color:black;
+            font-family: 'Courier New';
+            text-decoration: none;
+            color: black;
         }
-            a:hover {
-                color: dimgrey;
-            }
+
+        a:hover {
+            color: dimgrey;
+        }
 
         .aboutbox {
             width: 350px;
@@ -30,7 +32,7 @@
             font-family: 'Lato';
             padding: 50px;
             margin: 80px 200px;
-            line-height:1.6;
+            line-height: 1.6;
         }
 
         .back {
@@ -50,17 +52,18 @@
             <ul>
 
                 <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#about" style="margin-left:70px">ABOUT</a></li>
+                <li><a href="about.html" style="margin-left:70px">ABOUT</a></li>
                 <li>
                     <div class="dropdown">
                         <button class="dropbtn">PORTFOLIO</button>
                         <div class="dropdown-content">
                             <a href="gallery1.html">PHOTOGRAPHY</a>
-                            <a href="gallery2.html" style="text-align:center">GRAPHICS</a>
+                            <a href="gallery2.html">GRAPHICS</a>
                             <a href="gallery3.html">ILLUSTRATION</a>
                         </div>
                     </div>
                 </li>
+                <li><a href="main.html">HOME</a></li>
             </ul>
         </div>
     </div>
@@ -76,19 +79,26 @@
                 What you'll find here is a collection of my best work whether it be photography,
                 illustration or mixed media. I take inspiration from my life and from the eyes of an observer.
                 <br /><br />
-                <a href="url">work</a> / <a href="url">github</a> / <a href="url">linkedin</a>
+                <a href="http://www.allisonyao.com/">work</a> / <a href="https://github.com/allison98/">github</a> / <a href="https://www.linkedin.com/in/allisonyao0210/">linkedin</a>
 
             </p>
         </div>
     </div>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
-
     <script src="Scripts/jquery-1.10.2.js"></script>
-
     <script src="Scripts/jquery-1.10.2.intellisense.js"></script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+            var table = document.getElementById("table");
+            if (table.style.display == "block") {
+                $("#table").fadeOut(500);
+            }
+            else {
+                $("#table").fadeIn(500);
+            }
 
-
-    <script type="text/javascript" src="graphicjs.js"></script>
-
+        }
+    </script>
 </body>
 </html>
