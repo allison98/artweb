@@ -44,7 +44,7 @@
 
             /* Style the submit button with a specific background color etc */
         input[type=submit] {
-            background-color: #4CAF50;
+            background-color: silver;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -54,7 +54,7 @@
 
          /* When moving the mouse over the submit button, add a darker green color */
         input[type=submit]:hover {
-            background-color: #45a049;
+            background-color: grey;
         }
 
     </style>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="graphicmain.html">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
             </ul>
         </div>
     </div>
@@ -90,20 +90,21 @@
     <!-- about box -->
     <div class="">
         <div class="contactbox">
-                        <form method="post" name="myemailform" action="form-to-email.php">
-                      
-                          <label for="name">Full Name</label>
-                          <input type="text" id="name" name="name" placeholder="Your name...">
+        <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf4YKOvpIL21usuMx-Z3w86ixsCXd-bZIvKjIjEm6TfHlamFQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            
+            <label for="name">Full Name</label>
+                          <input type="text" id="name" name="entry.1744833336" placeholder="Your name...">
                       
                           <label for="email">Email</label>
-                          <input type="text" id="email" name="email" placeholder="Your email...">
+                          <input type="text" id="email" name="entry.107608720" placeholder="Your email...">
                       
                           <label for="message">Subject</label>
-                          <textarea id="message" name="message" placeholder="Write something..." style="height:100px"></textarea>
-                      
+                          <textarea id="message" name="entry.1417791278" placeholder="Write something..." style="height:100px"></textarea>
                           <input type="submit" value="Submit">
-                      
-                        </form>
+
+        </form>
+          
+         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
         </div>
     </div>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
@@ -121,6 +122,14 @@
             }
 
         }
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(1000);
+      $('#gform').prepend('Your submission has been processed...');
+      });
     </script>
 </body>
 </html>
