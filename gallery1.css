@@ -82,8 +82,7 @@ img.hover-it {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    max-height:83%;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -138,8 +137,6 @@ img.hover-it {
         width: 100%;
     }
 }
-
-
 
 .hideme {
     opacity:0;

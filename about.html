@@ -9,10 +9,6 @@
 <body>
     <!-- styles -->
     <style>
-        * {
-            overflow: hidden;
-        }
-
         .aboutbox a {
             font-family: 'Courier New';
             text-decoration: none;
@@ -30,13 +26,25 @@
             background-color: #f1f1f1;
             color: #A9A9A9;
             font-family: 'Lato';
-            padding: 50px;
-            margin: 80px 200px;
+            padding: 25px 50px;
+            margin: 40px 200px;
             line-height: 1.6;
         }
 
         .back {
             background-image: url(face.png);
+            background-position: 120px -39px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        img.profile {
+            position: absolute;
+            left: 0%;
+            width: 79%;
+            float: right;
+            z-index: -1;
+            margin-right: 29px;
         }
     </style>
 
@@ -51,7 +59,7 @@
         <div class="headerlinks" id="table" style="margin-top:0;padding-top:0;top:0;margin-right:3px">
             <ul>
 
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="about.html" style="margin-left:70px">ABOUT</a></li>
                 <li>
                     <div class="dropdown">
@@ -63,13 +71,14 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="main.html">HOME</a></li>
+                <li><a href="graphicmain.html">HOME</a></li>
             </ul>
         </div>
     </div>
 
     <!-- about box -->
-    <div class="back">
+    <div class="">
+        <img class="profile" src="face.png">
         <div class=" aboutbox">
             <h1>About Me</h1>
             <p>

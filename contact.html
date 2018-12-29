@@ -1,23 +1,48 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="header.css" />
+</head>
+<body>
+    <!-- styles -->
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+        .contactbox a {
+            font-family: 'Courier New';
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: dimgrey;
+        }
+
+        .contactbox {
+            width: 400px;
+            float: right;
+            height: 400px;
+            background-color: #f1f1f1;
+            color: #A9A9A9;
+            font-family: 'Lato';
+            padding: 25px 50px;
+            margin: 40px 200px;
+            line-height: 1.6;
         }
 
         input[type=text], select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */  
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
         }
 
+            /* Style the submit button with a specific background color etc */
         input[type=submit] {
             background-color: #4CAF50;
             color: white;
@@ -27,42 +52,75 @@
             cursor: pointer;
         }
 
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-
-        .container {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
+         /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+            background-color: #45a049;
         }
+
     </style>
-</head>
-<body>
 
-    <h3>Contact Form</h3>
+    <!--the header-->
+    <div class="myheader">
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
 
-    <div class="container">
-        <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <div class="headerlinks" id="table" style="margin-top:0;padding-top:0;top:0;margin-right:3px">
+            <ul>
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-            <input type="submit" value="Submit">
-        </form>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html" style="margin-left:70px">ABOUT</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">PORTFOLIO</button>
+                        <div class="dropdown-content">
+                            <a href="gallery1.html">PHOTOGRAPHY</a>
+                            <a href="gallery2.html">GRAPHICS</a>
+                            <a href="gallery3.html">ILLUSTRATION</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="graphicmain.html">HOME</a></li>
+            </ul>
+        </div>
     </div>
 
+    <!-- about box -->
+    <div class="">
+        <div class="contactbox">
+                        <form method="post" name="myemailform" action="form-to-email.php">
+                      
+                          <label for="name">Full Name</label>
+                          <input type="text" id="name" name="name" placeholder="Your name...">
+                      
+                          <label for="email">Email</label>
+                          <input type="text" id="email" name="email" placeholder="Your email...">
+                      
+                          <label for="message">Subject</label>
+                          <textarea id="message" name="message" placeholder="Write something..." style="height:100px"></textarea>
+                      
+                          <input type="submit" value="Submit">
+                      
+                        </form>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-1.10.2.intellisense.js"></script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+            var table = document.getElementById("table");
+            if (table.style.display == "block") {
+                $("#table").fadeOut(500);
+            }
+            else {
+                $("#table").fadeIn(500);
+            }
+
+        }
+    </script>
 </body>
 </html>
