@@ -43,7 +43,7 @@
         }
 
             /* Style the submit button with a specific background color etc */
-        input[type=submit] {
+        input[type=submit], #resubmit button {
             background-color: silver;
             color: white;
             padding: 12px 20px;
@@ -55,6 +55,13 @@
          /* When moving the mouse over the submit button, add a darker green color */
         input[type=submit]:hover {
             background-color: grey;
+        }
+
+        #resubmit {
+            display:none;
+            text-align:center;
+            margin:auto;
+            padding:50px;
         }
 
     </style>
@@ -105,6 +112,12 @@
         </form>
           
          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        <div id="resubmit">
+            Thanks for submitting
+            <br>
+            <br>
+            <button onclick="resub()">Resubmit</button>
+        </div>
         </div>
     </div>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
@@ -128,8 +141,12 @@
     <script type="text/javascript">
     $('#gform').on('submit', function(e) {
       $('#gform *').fadeOut(1000);
-      $('#gform').prepend('Your submission has been processed...');
+      $('#resubmit').delay(1000).fadeIn(1000);
       });
+    function resub() {
+      $('#resubmit').fadeOut(1000);
+      $('#gform *').delay(1000).fadeIn(1000);
+      };  
     </script>
 </body>
 </html>
