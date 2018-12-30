@@ -9,7 +9,8 @@
 
 .headerlinks {
     position: absolute;
-    font-family: 'Lato Hairline';
+    font-family: 'Lato';
+    font-weight:300;
     width: 100%;
     color: white;
     font-size: 19px;
@@ -103,7 +104,8 @@ li {
     margin-right: 15px;
     font-size: 19px;
     border: none;
-    font-family: 'Lato Hairline';
+    font-family: 'Lato';
+    font-weight:300;
     margin-top: 0;
     height: 100%;
     z-index: 10;
